@@ -1,0 +1,61 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  min-height: 800px;
+  margin: auto;
+}
+.pianobody {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-image: linear-gradient(to top, #434343 0%, black 100%);
+  min-height: 100px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 100, 0.17) 0px -23px 25px 0px inset,
+    rgba(168, 168, 168, 0.15) 0px -36px 30px 0px inset,
+    rgba(77, 76, 76, 0.1) 0px -79px 40px 0px inset,
+    rgba(51, 51, 51, 0.06) 0px 2px 1px, rgba(119, 119, 119, 0.09) 0px 4px 2px,
+    rgba(54, 54, 54, 0.09) 0px 8px 4px, rgba(63, 63, 63, 0.09) 0px 16px 8px,
+    rgba(94, 93, 93, 0.09) 0px 32px 16px;
+}
+
+.lower {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-image-slice: 1;
+  border-image-source: radial-gradient(circle, #20202c 20%, #515175 80%);
+  display: flex;
+  justify-content: center;
+  min-width: 90%;
+  background-color: linear-gradient(to top, #20202c 0%, #515175 100%);
+  min-height: 70%;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+.key {
+  position: relative;
+  min-height: 100px;
+  min-width: 55px;
+  box-shadow: rgba(68, 68, 68, 0.17) 0px -10px 10px 0px inset,
+    rgba(80, 79, 79, 0.26) 0px -12px 50px 0px inset,
+    rgba(97, 97, 97, 0.1) 0px -7px 20px 0px inset;
+  border-radius: 0 0 8px 8px;
+}
+
+.play {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top: 0;
+  border-bottom: 35px solid black;
+  bottom: 10%;
+  left: calc(50% - 50px);
+  transform: rotateZ(90deg);
+  transition-duration: 300ms;
+}
+.play:hover {
+  border-bottom: 35px solid #727272;
+}
